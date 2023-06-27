@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div>
+      <div>
+        <p class="heading">Url shortener</p>
+        <hr />
+      </div>
+      <div class="main">{% block content %} {% endblock %}</div>
+    </div>
+  </body>
+</html>

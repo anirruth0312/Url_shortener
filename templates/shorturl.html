@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+<!--  -->
+{% block title %}Short URL{% endblock %}
+<!--  -->
+{% block content %}
+<script>
+  function copyURL() {
+    var shortURL = "http://127.0.0.1:5000/{{shorturlvalue}}";
+    var startIndex = shortURL.indexOf("http:");
+    var substring = shortURL.substring(startIndex);
+    var tempInput = document.createElement("input");
+    document.body.appendChild(tempInput);
+    tempInput.value = substring;
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    var notification = document.getElementById("notification");
+    notification.innerHTML = "URL copied to clipboard!";
+  }
+</script>
+<h1 id="answer" class="answer">
+  The Short Url is : <span>http://127.0.0.1:5000/{{shorturlvalue}}</span>
+</h1>
+<button class="button" onclick="copyURL()">Copy Url</button>
+<a href="http://127.0.0.1:5000/"><button class="button">Back to Home</button></a
+><br /><span id="notification"></span>
+{% endblock %}
