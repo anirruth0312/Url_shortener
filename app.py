@@ -4,7 +4,7 @@ from Url_shortener.hash import calculateHash
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/Anirruth/Desktop/Url/Url_shortener/Url.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///{absolute path of your db}Url.db'
 app.config['SQLALCHEMY_TRACK_MODIFCATIONS'] = False
 
 db = SQLAlchemy(app)
