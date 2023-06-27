@@ -96,4 +96,3 @@ def calculateHash(string):
     return(hashval)
 
 
-print(calculateHash("https://www.analyticsinsight.net/top-10-vs-code-extensions-for-python-developers-to-learn-in-2023/"))
